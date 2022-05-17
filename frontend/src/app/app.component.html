@@ -1,0 +1,24 @@
+<mat-toolbar style="background-color: '#1562FC'; color: 'white'">
+  <span>TWAICE</span>
+  <span class="example-spacer"></span>
+  <span >
+    test@twaice.com
+  </span>
+</mat-toolbar>
+<mat-card class="card">
+    <div class="sidenav">
+    <div class="sidenavcontent">
+      <div class="navigation">NAVIGATION</div>
+      <button (click)="handle('about')" mat-button color="basic" class="sidenavbutton">ABOUT</button>
+      <button (click)="handle('chart')" mat-button color="basic" class="sidenavbutton">CHART</button>
+    </div>
+  </div>
+    <mat-card class="content">
+      <app-about *ngIf="about"></app-about>
+      <app-chart-view *ngIf="chart"></app-chart-view>
+      <!-- <router-outlet></router-outlet> -->
+    </mat-card>
+</mat-card>
+<mat-toolbar style="background-color: 'black'; color: 'white'">
+  <span>© 2020 TWAICE Technologies GmbH</span>
+</mat-toolbar>

@@ -1,0 +1,7 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.chartselect :option{
+  max-width: 100px;
+}

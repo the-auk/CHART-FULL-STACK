@@ -1,0 +1,17 @@
+<mat-toolbar style="background-color: '#cbd5e0'; color: 'black'">
+    <span>CHART</span>
+    <span class="example-spacer"></span>
+    <mat-form-field appearnace="legacy">
+        <mat-select disableOptionCentering class="chartselect" [(ngModel)]="selectedItem" (selectionChange)="onChange($event.value)">
+            <mat-option *ngFor="let cell of cells; let i = index" [value]="i + 1">
+                {{cell}}
+              </mat-option>
+              <mat-option value="all data">
+                all data
+              </mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-toolbar>
+<mat-card style="padding: '0px'; width: 100%; height: 100%;">
+    <app-chart [plotData]="data"></app-chart>
+</mat-card>
